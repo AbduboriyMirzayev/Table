@@ -21,8 +21,8 @@ export default function Pagination({ data, size, page, handlePage }) {
       >
         <ArrowLeft />
       </button>
-      {result.map((item) => (
-        <li className="pagination-list__item">
+      {result.map((item,index) => (
+        <li key={index} className="pagination-list__item">
           <button
             className={`pagination-list__btn ${
               item === page ? "pagination-list__btn--active" : ""

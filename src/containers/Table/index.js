@@ -217,8 +217,8 @@ export default function Table() {
           </tr>
         </thead>
         <tbody className="table__body">
-          {result.map((item) => (
-            <tr className="table__body-row">
+          {result.map((item,index) => (
+            <tr key={index} className="table__body-row">
               <td className="table__text col-2">{item.date}</td>
               <td className="table__text col-3">{item.name}</td>
               <td className="table__text col-3">{item.quantity}</td>
