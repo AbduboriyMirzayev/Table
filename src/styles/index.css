@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.col-2 {
+  min-width: 100px;
+  width: 10%;
+}
+
+.col-3 {
+  width: 33.3%;
+  min-width: 250px;
+}
