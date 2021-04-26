@@ -3,184 +3,162 @@ import React, { useState } from "react";
 import paginationData from "../../utils/pagination";
 import Pagination from "../../components/Pagination";
 import { ReactComponent as Search } from "../../assets/loupe.svg";
+import { ReactComponent as Empty } from "../../assets/empty.svg";
 
 import S from "../../styles/Table";
 
 const defaultData = [
   {
-    id: "5e14154ffewwv454489fqe",
-    name: "San piter burg",
+    name: "Севастополь",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "26.04.2021",
   },
   {
-    id: "5e14154ffewwv454ewqe123",
-    name: "San piter burg",
+    name: "Алушта",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "1.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Абакан",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "Assshkl piter burg",
+    name: "Астрахань",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "21.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Челябинск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "20.05.2021",
   },
   {
-    id: "5e14154ffewwv454489fqe",
-    name: "San piter burg",
+    name: "Екатеринбург",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewwv454ewqe123",
-    name: "Clan piter burg",
+    name: "Казань",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "Ban piter burg",
+    name: "Хабаровск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Курск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Листвянка",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewwv454489fqe",
-    name: "San piter burg",
+    name: "Магнитогорск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewwv454ewqe123",
-    name: "San piter burg",
+    name: "Ноябрьск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Новороссийск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Оренбург",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Омск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Петрозаводск",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Сочи",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Тверь",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Выборг",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Елабуга",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Воронеж",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Елабуга",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Александров",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
   {
-    id: "5e14154ffewweqweq12334",
-    name: "San piter burg",
+    name: "Киров",
     quantity: 10,
     distance: 80,
-    date: "12,05,2021",
+    date: "12.05.2021",
   },
 ];
 
 export default function Table() {
   const [page, setPage] = useState({ currentPage: 1, size: 10 });
   const [sortedData, setSortedData] = useState(defaultData);
-  const [isSearchOpened, setIsSearchOpened] = useState(false);
+  const [isSearchInp, setIsSearchInp] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(false);
 
   const { currentPage, size } = page;
 
@@ -190,23 +168,23 @@ export default function Table() {
 
   const handleSearch = (e) => {
     if (e.target.value) {
-      let result = sortedData.filter((element) => {
+      let result = defaultData.filter((element) => {
         return element.name
           .toLowerCase()
           .includes(e.target.value.toLowerCase());
       });
-      console.log(result.length);
+      result.length === 0? setIsEmpty(true):setIsEmpty(false); 
       setSortedData(result);
     } else {
       setSortedData(defaultData);
     }
   };
 
-  const handleSearchOpen = () => {
-    if (isSearchOpened) {
-      setIsSearchOpened(false);
+  const handleSearchInp = () => {
+    if (isSearchInp) {
+      setIsSearchInp(false);
     } else {
-      setIsSearchOpened(true);
+      setIsSearchInp(true);
     }
   };
 
@@ -221,15 +199,15 @@ export default function Table() {
             <th className="table__title col-3 table__wrapper">
               <span>Название</span>
               <div className="table__inner">
-                <Search className="table__icon" onClick={handleSearchOpen} />
+                <Search className="table__icon" onClick={handleSearchInp} />
                 <input
                   className={
-                    isSearchOpened
+                    isSearchInp
                       ? "table__inp table__inp--active"
                       : "table__inp"
                   }
                   type="text"
-                  placeholder="Search..."
+                  placeholder="Поиск..."
                   onChange={handleSearch}
                 />
               </div>
@@ -244,11 +222,17 @@ export default function Table() {
               <td className="table__text col-2">{item.date}</td>
               <td className="table__text col-3">{item.name}</td>
               <td className="table__text col-3">{item.quantity}</td>
-              <td className="table__text col-3">{item.distance} km</td>
+              <td className="table__text col-3">{item.distance} км</td>
             </tr>
           ))}
         </tbody>
       </table>
+      {
+        isEmpty?<div className="table__empty">
+        <Empty className="table__empty-icon" />
+        <div className="table__empty-text">Упс! По вашему запросу ничего не найдено.</div>
+      </div>:null
+      }
       <Pagination
         data={sortedData}
         page={currentPage}

@@ -123,6 +123,27 @@ S.Table = styled.div`
     cursor: pointer;
     z-index: 9;
   }
+
+  .table__empty{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 50px 0;
+  }
+
+  .table__empty-icon{
+    width:150px;
+    height:auto;
+    color:#aaa;
+  }
+
+  .table__empty-text {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align:center;
+}
+
 `;
 
 export default S;
